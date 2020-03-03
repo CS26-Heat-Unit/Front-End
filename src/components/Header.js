@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <div className="header">
-      <div className="hamburger">🍔  ?</div>
+      <div className="hamburger"><span>🍔  ?</span></div>
       <div className="main-title">
         <h1 className="title-font">Heat Unit</h1>
       </div>
