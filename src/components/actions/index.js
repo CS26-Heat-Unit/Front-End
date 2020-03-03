@@ -2,11 +2,11 @@ import axiosWithAuth from '../../utils/axiosWithAuth';
 import axios from 'axios';
 
 export  const LOGIN_START = 'LOGIN_START';
-export  const LOGIN_SUCCCESS = 'LOGIN_SUCCESS';
+export  const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export  const LOGIN_FAIL = 'LOGIN_FAIL';
 
 export  const REGISTER_START = 'REGISTER_START';
-export  const REGISTER_SUCCCESS = 'REGISTER_SUCCESS';
+export  const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
 export  const REGISTER_FAIL = 'REGISTER_FAIL';
 
 export const LOGOUT = 'LOGOUT';
@@ -20,7 +20,7 @@ export const login = (credentials) => dispatch => {
             console.log('response', response)
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('user', response.data.id)
-            dispatch({type: LOGIN_SUCCCESS, payload: response.data.id})
+            dispatch({type: LOGIN_SUCCESS, payload: response.data.id})
         })
         .catch(err => {
             dispatch({type: LOGIN_FAIL, payload: err})
@@ -36,7 +36,7 @@ export const register = (credentials) => dispatch => {
             console.log('response', response)
             localStorage.setItem('token', response.data.token);
             localStorage.setItem('user', response.data.id)
-            dispatch({type: REGISTER_SUCCCESS, payload: response.data.id})
+            dispatch({type: REGISTER_SUCCESS, payload: response.data.id})
         })
         .catch(err => {
             dispatch({type: REGISTER_FAIL, payload: err})
