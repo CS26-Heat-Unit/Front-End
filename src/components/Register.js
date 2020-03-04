@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { connect } from "react-redux";
@@ -7,7 +7,8 @@ const Register = props => {
 
   const [credentials, setCredentials] = useState({
     username: "",
-    password: ""
+    password1: "",
+    password2: ""
   });
 
   const handleChange = e => {
@@ -17,20 +18,18 @@ const Register = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // axios
-    //   .post("", credentials)
-    //   .then(res => {
-    //     console.log(res);
-    //     localStorage.setItem("token", res.data.payload);
-    //     props.setLoggedIn(true);
-    //     props.history.push("/play");
-    //   })
-    //   .catch(err => {
-    //     console.log(err);
-    //   });
-    localStorage.setItem("token", "token");
-    props.setLoggedIn(true);
-    props.history.push("/play");
+    console.log(credentials)
+    axios
+      .post("https://heat-unit-backend.herokuapp.com/api/registration/", credentials)
+      .then(res => {
+        console.log(res);
+        localStorage.setItem("token", res.data.key);
+        props.setLoggedIn(true);
+        props.history.push("/play");
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   return (
@@ -46,9 +45,16 @@ const Register = props => {
         />
         <input
           type="password"
-          name="password"
-          value={credentials.password}
+          name="password1"
+          value={credentials.password1}
           placeholder="enter password"
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          name="password2"
+          value={credentials.password2}
+          placeholder="enter password again"
           onChange={handleChange}
         />
         <button className="button" type="submit">Sign Up</button>

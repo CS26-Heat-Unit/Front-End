@@ -12,28 +12,30 @@ function Header(props) {
   };
 
   return (
-    <div className="header">
-      <div className="hamburger" />
-      <div className="main-title">
-        <h1 className="title-font">Heat Unit</h1>
-      </div>
-      <div className="buttons">
-        {!props.loggedIn ? (
-          <div className="buttons">
-            <Link to="/login">
-              <div className="button">Log In</div>
-            </Link>
-            <Link to="/register">
-              <div className="button">Register</div>
-            </Link>
-          </div>
-        ) : (
-          <div className="buttons">
-            <div className="button" onClick={toggleLogout}>
-              Log Out
+    <div className="outer">
+      <div className="header">
+        <div className="hamburger" />
+        <div className="main-title">
+          <h1 className="title-font">Heat Unit</h1>
+        </div>
+        <div className="buttons">
+          {!props.loggedIn ? (
+            <div className="buttons">
+              <Link to="/login">
+                <div className="button">Log In</div>
+              </Link>
+              <Link to="/register">
+                <div className="button">Register</div>
+              </Link>
             </div>
-          </div>
-        )}
+          ) : (
+            <div className="buttons">
+              <div className="button logout" onClick={toggleLogout}>
+                Log Out
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
