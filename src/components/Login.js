@@ -17,20 +17,17 @@ const Login = props => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // axios
-    //   .post("", credentials)
-    //   .then(res => {
-    //     console.log(res);
-    //     localStorage.setItem("token", res.data.payload);
-    //     props.setLoggedIn(true);
-    //     props.history.push("/play");
-    //   })
-    //   .catch(err => {
-    //     console.log(err);
-    //   });
-    localStorage.setItem("token", "token");
-    props.setLoggedIn(true);
-    props.history.push("/play");
+    axios
+      .post("https://heat-unit-backend.herokuapp.com/login/", credentials)
+      .then(res => {
+        console.log(res);
+        localStorage.setItem("token", res.data.key);
+        props.setLoggedIn(true);
+        props.history.push("/play");
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 
   return (

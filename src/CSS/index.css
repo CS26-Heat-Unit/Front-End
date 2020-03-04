@@ -1,39 +1,67 @@
-.header {
+.outer {
+  border-bottom: 4px solid yellowgreen;
+  box-shadow: 5px 5px 5px 5px maroon;
+  margin: -10px -10px 30px;
+  background-image: linear-gradient(to bottom right, maroon, black);
+}
+.outer .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 30px;
+  margin: -10px -10px 0px;
   text-align: center;
-  border-bottom: 1px solid black;
+  background-color: #0f0f0f;
+  border-bottom: 4px solid yellow;
+  background-image: linear-gradient(to bottom right, red, darkred);
 }
-.header .hamburger {
+.outer .header .hamburger {
+  background: none;
   align-self: flex-start;
   text-align: left;
-  width: 200px;
+  width: 250px;
 }
-.header .main-title {
+.outer .header .main-title {
   justify-self: center;
+  background: none;
+  border-bottom: none;
+  border-radius: 20px;
 }
-.header .main-title .title-font {
-  font-size: 2.5rem;
+.outer .header .main-title .title-font {
+  background: none;
+  font-size: 2.8rem;
+  padding: 0 70px;
   font-family: 'Trade Winds', 'Verdana';
 }
-.header .buttons {
-  width: 200px;
+.outer .header .buttons {
+  background: none;
+  width: 250px;
+  margin-top: 5px;
+  padding-right: 10px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: flex-start;
   align-self: flex-start;
 }
-.header .buttons .button {
-  width: 80px;
+.outer .header .buttons .button {
+  width: 90px;
   padding: 5px;
-  border: 1px solid black;
+  margin-right: 5px;
+  background-color: yellowgreen;
+  background-image: linear-gradient(to bottom left, yellow, yellowgreen);
+  color: #181818;
+  border: 2px solid yellow;
   border-radius: 10px;
 }
+.outer .header .buttons .logout {
+  align-self: flex-end;
+  justify-self: flex-end;
+  margin-right: 0;
+}
 .console {
-  border: 1px solid black;
+  background-color: yellowgreen;
+  background-image: linear-gradient(to bottom left, yellow, green);
+  border: 3px solid green;
   border-radius: 5px;
   flex-direction: column;
   width: 80%;
@@ -42,10 +70,10 @@
   display: flex;
   max-width: 1000px;
   margin: auto;
-  box-shadow: silver 1px 1px 0px 1px;
 }
 .console .map {
-  border: 1px solid black;
+  border: 3px solid #0f0f0f;
+  background-color: #0f0f0f;
   border-radius: 5px;
   width: 95%;
   margin: 5px auto;
@@ -57,21 +85,91 @@
   justify-content: space-evenly;
   height: 19%;
   padding: 10px 0;
+  background-color: whitesmoke;
 }
 .console .chat {
-  border: 1px solid black;
+  border: 1px solid #0f0f0f;
+  background-color: lightgray;
+  color: #0f0f0f;
   border-radius: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: flex-end;
   width: 40%;
+  padding: 0 0 5px 10px;
+  box-shadow: 2px 3px silver inset;
 }
 .console .controls {
-  border: 1px solid black;
-  border-radius: 5px;
+  background: none;
   width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.console .controls .actions {
+  display: flex;
+  background: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.console .controls .actions .action {
+  width: 110px;
+  height: 50px;
+  margin: auto;
+  background-color: maroon;
+  background-image: linear-gradient(to bottom right, red, darkred);
+  border: 2px solid yellow;
+  border-radius: 5px;
+  font-family: 'Trade Winds', 'Verdana';
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.console .controls .arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+.console .controls .arrows .arrow {
+  margin: 2px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: maroon;
+  background-image: linear-gradient(to bottom right, red, darkred);
+  border: 2px solid yellow;
+  border-radius: 5px;
+}
+.console .controls .arrows .arrows-bottom {
+  display: flex;
+  flex-direction: row;
 }
 .console .score {
-  border: 1px solid black;
+  border: 1px solid #0f0f0f;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 20%;
+}
+.console .score h2 {
+  font-family: 'Trade Winds', 'Verdana';
+  color: maroon;
+  padding-left: 10px;
+}
+.console .score h4 {
+  font-family: 'Trade Winds', 'Verdana';
+  color: maroon;
+  margin-top: 0px;
+  font-size: 1.3rem;
+  padding-left: 10px;
 }
 .login {
   height: 220px;
@@ -81,12 +179,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
+  background-image: linear-gradient(to bottom left, yellow, green);
+  border: 3px solid green;
   border-radius: 5px;
-  box-shadow: silver 1px 1px 0px 1px;
+  box-shadow: black 1px 1px 0px 1px;
 }
 .login h2 {
   font-size: 1.2rem;
+  background: none;
 }
 .login .loginForm {
   display: flex;
@@ -94,8 +194,10 @@
   justify-content: space-between;
   align-items: center;
   width: 50%;
+  background: none;
 }
 .login .loginForm input {
+  color: #0f0f0f;
   margin: 5px;
   padding: 5px 10px;
 }
@@ -103,14 +205,68 @@
   width: 100px;
   padding: 5px;
   margin: 10px;
-  border: 1px solid black;
+  background-color: maroon;
+  background-image: linear-gradient(to bottom right, red, darkred);
+  border: 2px solid goldenrod;
   border-radius: 5px;
 }
-.login .loginForm span {
+.login span {
+  background: none;
   margin: 20px;
+  color: white;
+}
+.register {
+  height: 220px;
+  width: 30%;
+  max-width: 500px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to bottom left, yellow, green);
+  border: 3px solid green;
+  border-radius: 5px;
+  box-shadow: black 1px 1px 0px 1px;
+}
+.register h2 {
+  font-size: 1.2rem;
+  background: none;
+}
+.register .loginForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  background: none;
+}
+.register .loginForm input {
+  color: #0f0f0f;
+  margin: 5px;
+  padding: 5px 10px;
+}
+.register .loginForm .button {
+  width: 100px;
+  padding: 5px;
+  margin: 10px;
+  background-color: maroon;
+  background-image: linear-gradient(to bottom right, red, darkred);
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+}
+.register span {
+  background: none;
+  margin: 20px;
+  color: white;
 }
 * {
+  color: white;
   font-size: 16px;
+}
+body {
+  background-image: url(https://thumbs.dreamstime.com/b/chilli-background-vector-seamless-pattern-endless-texture-can-be-used-wallpaper-printing-fabric-paper-scrapbooking-85543092.jpg);
+  background-repeat: repeat;
+  background-size: 20%;
 }
 .App {
   width: 100%;

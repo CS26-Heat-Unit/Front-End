@@ -3,7 +3,7 @@ import React from "react";
 function Chat() {
   return (
     <div className="chat">
-      hello from inside the chat
+      Chat in progress...
     </div>
   );
 }
