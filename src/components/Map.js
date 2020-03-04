@@ -1,9 +1,11 @@
 import React from "react";
+import Maptest from './Maptest'
+
 
 function Map() {
   return (
     <div className="map">
-      hello from inside the tilemap
+      <Maptest/>
     </div>
   );
 }
