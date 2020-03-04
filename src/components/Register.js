@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { connect } from "react-redux";
 
-const Login = props => {
+const Register = props => {
 
   const [credentials, setCredentials] = useState({
     username: "",
@@ -35,7 +35,7 @@ const Login = props => {
 
   return (
     <div className="login">
-      <h2>Welcome back!</h2>
+      <h2>Create an Account</h2>
       <form onSubmit={handleSubmit} className="loginForm">
         <input
           type="text"
@@ -51,10 +51,10 @@ const Login = props => {
           placeholder="enter password"
           onChange={handleChange}
         />
-        <button className="button" type="submit">Log In</button>
+        <button className="button" type="submit">Sign Up</button>
       </form>
-      <Link to="/register">
-        <span>Don't have an account?</span>
+      <Link to='/login'>
+      <span>Already have an account?</span>
       </Link>
     </div>
   );
@@ -64,4 +64,4 @@ const mapStateToProps = state => {
   return { ...state };
 };
 
-export default connect(mapStateToProps, { Login })(Login);
+export default connect(mapStateToProps, { Register })(Register);
