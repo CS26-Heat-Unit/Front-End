@@ -18,7 +18,7 @@ const Login = props => {
       .then(res => {
         setSomethingWentWrong(false);
         console.log(res);
-        localStorage.setItem("token", res.data.key);
+        localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", data.username);
         props.setLoggedIn(true);
         props.history.push("/play");

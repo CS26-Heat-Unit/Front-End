@@ -8,6 +8,7 @@ import Score from "./Score";
 const Console = (props) => {
 
   const [score, setScore] = useState(0);
+  localStorage.setItem('score', score)
   const [chats, setChats] = useState([]);
 
     return (

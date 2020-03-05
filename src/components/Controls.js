@@ -7,6 +7,7 @@ function Controls(props) {
   async function handleFight(e) {
     e.preventDefault();
     await props.setScore(props.score + add);
+    localStorage.setItem("score", props.score)
     await props.setChats([{message: `Victory! You gained ${add} scovilles.`, time: new Date().toTimeString()}, ...props.chats]);
   }
 
