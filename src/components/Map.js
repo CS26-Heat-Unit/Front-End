@@ -5,7 +5,7 @@ import Maptest from './Maptest'
 function Map() {
   return (
     <div className="map">
-      <Maptest/>
+      <Maptest />
     </div>
   );
 }

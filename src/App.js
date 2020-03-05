@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PrivateRoute from "./components/PrivateRoute";
 import { Route, Redirect } from "react-router-dom";
 import Header from "./components/Header";
 import Console from "./components/Console";
@@ -14,7 +13,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* There is no '/' -> it will always try to Redirect '/' to '/play' but will Redirect again to '/login' if unauthorized */}
       <Route exact path="/" render={props => <Redirect to="/play" />} />
 
       <Route
