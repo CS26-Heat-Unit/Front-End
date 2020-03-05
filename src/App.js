@@ -47,7 +47,7 @@ function App() {
           />
         )}
       />
-      <Route path="/play" render={props => loggedIn ? <Console /> : <Redirect to='/login' />} />
+      <PrivateRoute path="/play" render={props => <Console />} />
     </div>
   );
 }
