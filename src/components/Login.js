@@ -88,7 +88,7 @@ const Login = props => {
 
       {somethingWentWrong ? (
         <div className="somethingWentWrong">
-          <p>Something went wrong! Please try again.</p>
+          <p>Your username and/or password is incorrect. Please try again.</p>
         </div>
       ) : null}
     </>
