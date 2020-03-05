@@ -1,4 +1,6 @@
 import React from "react";
+import Maptest from './Maptest'
+
 
 var ctx = null;
 var gameMap = [

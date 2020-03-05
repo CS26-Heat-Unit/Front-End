@@ -1,6 +1,6 @@
 .outer {
   border-bottom: 4px solid yellowgreen;
-  box-shadow: 5px 5px 5px 5px maroon;
+  box-shadow: 0px 0 5px 5px maroon;
   margin: -10px 0px 30px;
   background-image: linear-gradient(to bottom right, maroon, black);
 }
@@ -9,7 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: -10px -10px 0px;
+  margin: -10px 0px 0px;
   text-align: center;
   background-color: #0f0f0f;
   border-bottom: 4px solid yellow;
@@ -48,10 +48,15 @@
   padding: 5px;
   margin-right: 5px;
   background-color: yellowgreen;
-  background-image: linear-gradient(to bottom left, yellow, yellowgreen);
-  color: #181818;
+  color: black;
   border: 2px solid yellow;
   border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+.outer .header .buttons .button:hover {
+  transition: 0.2s ease-in-out;
+  color: maroon;
+  background-color: yellow;
 }
 .outer .header .buttons .logout {
   align-self: flex-end;
@@ -63,118 +68,164 @@
   background-image: linear-gradient(to bottom left, yellow, green);
   border: 3px solid green;
   border-radius: 5px;
-  flex-direction: column;
-  width: 80%;
-  height: 70vh;
-  max-height: 800px;
   display: flex;
-  max-width: 1000px;
+  flex-direction: column;
+  width: 1200px;
+  height: auto;
   margin: auto;
 }
 .console .map {
   border: 3px solid #0f0f0f;
   background-color: #0f0f0f;
   border-radius: 5px;
-  width: 95%;
+  width: 1120px;
+  height: 450px;
   margin: 5px auto;
-  height: 80%;
 }
 .console .interface {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  height: 19%;
+  justify-content: center;
+  height: auto;
   padding: 10px 0;
   background-color: whitesmoke;
 }
-.console .chat {
+.console .interface .chat {
   border: 1px solid #0f0f0f;
-  background-color: lightgray;
+  background-color: white;
   color: #0f0f0f;
   border-radius: 5px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-end;
-  width: 40%;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 43%;
+  height: 150px;
+  overflow: hidden;
   padding: 0 0 5px 10px;
   box-shadow: 2px 3px silver inset;
 }
-.console .controls {
+.console .interface .chat .messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-x: auto;
+}
+.console .interface .chat .messages .chats {
+  color: #0f0f0f;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+.console .interface .chat .messages .chats .time {
+  color: grey;
+  font-size: 0.6rem;
+}
+.console .interface .chat .enter {
+  font-size: 0.6rem;
+  color: #0f0f0f;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.console .interface .chat .enter .spacer {
+  width: 5px;
+}
+.console .interface .controls {
   background: none;
   width: 30%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.console .controls .actions {
+.console .interface .controls .actions {
   display: flex;
   background: none;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
-.console .controls .actions .action {
+.console .interface .controls .actions .action {
   width: 110px;
-  height: 50px;
+  height: 70px;
   margin: auto;
   background-color: maroon;
   background-image: linear-gradient(to bottom right, red, darkred);
-  border: 2px solid yellow;
-  border-radius: 5px;
+  border: 2px solid darkgoldenrod;
+  border-radius: 10px;
   font-family: 'Trade Winds', 'Verdana';
-  font-size: 1.3rem;
+  font-size: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.02s ease-in-out;
 }
-.console .controls .arrows {
+.console .interface .controls .actions .action:hover {
+  transition: 0.2s ease-in-out;
+  font-size: 1.8rem;
+  color: maroon;
+}
+.console .interface .controls .actions .action:active {
+  box-shadow: inset 4px 0 4px 4px maroon;
+  font-size: 1.6rem;
+}
+.console .interface .controls .arrows {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: none;
+  align-self: flex-end;
 }
-.console .controls .arrows .arrow {
+.console .interface .controls .arrows .arrow {
   margin: 2px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: maroon;
   background-image: linear-gradient(to bottom right, red, darkred);
-  border: 2px solid yellow;
+  border: 2px solid darkgoldenrod;
   border-radius: 5px;
+  transition: 0.02s ease-in-out;
 }
-.console .controls .arrows .arrows-bottom {
+.console .interface .controls .arrows .arrow:hover {
+  transition: 0.2s ease-in-out;
+  font-size: 1.55rem;
+  color: maroon;
+}
+.console .interface .controls .arrows .arrow:active {
+  box-shadow: inset 4px 0 4px 4px maroon;
+  font-size: 1.5rem;
+}
+.console .interface .controls .arrows .arrows-bottom {
   display: flex;
   flex-direction: row;
 }
-.console .score {
+.console .interface .score {
   border: 1px solid #0f0f0f;
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   width: 20%;
+  background-image: linear-gradient(to top, white, yellow, orange, red, darkred);
 }
-.console .score h2 {
-  font-family: 'Trade Winds', 'Verdana';
-  color: maroon;
-  padding-left: 10px;
-}
-.console .score h4 {
-  font-family: 'Trade Winds', 'Verdana';
-  color: maroon;
-  margin-top: 0px;
-  font-size: 1.3rem;
+.console .interface .score h2 {
+  color: white;
+  margin-top: 10px;
+  font-size: 1.6rem;
   padding-left: 10px;
 }
 .login {
-  height: 220px;
-  width: 30%;
-  max-width: 500px;
+  height: auto;
+  width: 40%;
+  max-width: 800px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -185,7 +236,7 @@
   box-shadow: black 1px 1px 0px 1px;
 }
 .login h2 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   background: none;
 }
 .login .loginForm {
@@ -193,75 +244,60 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 50%;
+  width: 70%;
   background: none;
 }
-.login .loginForm input {
+.login .loginForm TextField {
   color: #0f0f0f;
   margin: 5px;
-  padding: 5px 10px;
 }
 .login .loginForm .button {
-  width: 100px;
+  width: 130px;
   padding: 5px;
   margin: 10px;
   background-color: maroon;
   background-image: linear-gradient(to bottom right, red, darkred);
   border: 2px solid goldenrod;
   border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+.login .loginForm .button:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.02);
 }
 .login span {
   background: none;
-  margin: 20px;
+  font-size: 0.8rem;
   color: white;
 }
-.register {
-  height: 220px;
-  width: 30%;
-  max-width: 500px;
-  margin: 100px auto;
+.error::before {
+  display: inline;
+  content: "⚠ ";
+}
+.somethingWentWrong {
+  height: auto;
+  width: 40%;
+  max-width: 800px;
+  margin: -80px auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   align-items: center;
-  background-image: linear-gradient(to bottom left, yellow, green);
-  border: 3px solid green;
+  background-color: maroon;
+  background-image: linear-gradient(to bottom right, red, darkred);
+  color: white;
+  border: 3px solid white;
   border-radius: 5px;
   box-shadow: black 1px 1px 0px 1px;
 }
-.register h2 {
-  font-size: 1.2rem;
-  background: none;
-}
-.register .loginForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  background: none;
-}
-.register .loginForm input {
-  color: #0f0f0f;
-  margin: 5px;
-  padding: 5px 10px;
-}
-.register .loginForm .button {
-  width: 100px;
-  padding: 5px;
-  margin: 10px;
-  background-color: maroon;
-  background-image: linear-gradient(to bottom right, red, darkred);
-  border: 2px solid goldenrod;
-  border-radius: 5px;
-}
-.register span {
-  background: none;
-  margin: 20px;
-  color: white;
+.somethingWentWrong p {
+  font-size: 0.8rem;
 }
 * {
   color: white;
   font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
   background-image: url(https://thumbs.dreamstime.com/b/chilli-background-vector-seamless-pattern-endless-texture-can-be-used-wallpaper-printing-fabric-paper-scrapbooking-85543092.jpg);
