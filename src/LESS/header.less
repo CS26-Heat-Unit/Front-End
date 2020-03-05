@@ -1,29 +1,24 @@
-@image: "https://lh3.googleusercontent.com/proxy/GZWUlIa0AHoUb4yxO0e-q8w6D90yemThxE2aTDyMZ1xPYq__Ox0H4gV6pqm8kZi84DO0SmxjMChnpNZqAzEY_qI_Kxa5jsyxAVeOHA4kTAUeoRpDSWcxhoOmOKzI7xUlIHhLy8k";
-
 .outer {
-    border-bottom: 4px solid @green;
-    box-shadow: 5px 5px 5px 5px @red;
-    margin: -10px -10px 30px;
-    background-image: linear-gradient(to bottom right, @red, black);
+  border-bottom: 4px solid @green;
+  box-shadow: 0px 0 5px 5px @red;
+  margin: -10px 0px 30px;
+  background-image: linear-gradient(to bottom right, @red, black);
 
   .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: -10px -10px 0px;
+    margin: -10px 0px 0px;
 
     text-align: center;
 
     background-color: @black;
     border-bottom: 4px solid @yellow;
     background-image: linear-gradient(to bottom right, red, darkred);
-    //   background-image: url(@image);
-
-
 
     .hamburger {
-        background: none;
+      background: none;
       align-self: flex-start;
       text-align: left;
       width: 250px;
@@ -61,10 +56,16 @@
         padding: 5px;
         margin-right: 5px;
         background-color: @green;
-        background-image: linear-gradient(to bottom left, @yellow, @green);
-        color: @grey;
+        color: black;
         border: 2px solid @yellow;
         border-radius: 10px;
+        transition: .2s ease-in-out;
+
+        &:hover {
+          transition: .2s ease-in-out;
+          color: @red;
+          background-color: @yellow;
+        }
       }
 
       .logout {
