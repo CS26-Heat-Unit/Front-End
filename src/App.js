@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PrivateRoute from "./components/PrivateRoute";
+import { PrivateRoute } from "./components/PrivateRoute";
 import { Route, Redirect } from "react-router-dom";
 import Header from "./components/Header";
 import Console from "./components/Console";
@@ -47,7 +47,7 @@ function App() {
           />
         )}
       />
-      <Route path="/play" render={props => <Console />} />
+      <Route path="/play" render={props => loggedIn ? <Console /> : <Redirect to='/login' />} />
     </div>
   );
 }
