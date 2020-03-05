@@ -1,12 +1,8 @@
 import React from "react";
 
-
-
-
-function Map() {
-  var ctx = null;
+var ctx = null;
 var gameMap = [
-	2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+	0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 	0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0,
 	0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0,
 	0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0,
@@ -191,11 +187,21 @@ function drawGame()
 		player.dimensions[0], player.dimensions[1]);
 
 	ctx.fillStyle = "#ff0000";
-	ctx.fillText("FPS: " + framesLastSecond, 240, 240);
+	ctx.fillText("FPS: " + framesLastSecond, 10, 20);
 
 	lastFrameTime = currentFrameTime;
 	requestAnimationFrame(drawGame);
+
+
 }
+
+
+function Map() {
+  return (
+    <div className="map">
+	<canvas id="game" width="950" height="640"></canvas>
+    </div>
+  );
 }
 
 export default Map;

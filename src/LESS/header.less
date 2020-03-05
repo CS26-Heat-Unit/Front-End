@@ -1,39 +1,77 @@
-.header {
+@image: "https://lh3.googleusercontent.com/proxy/GZWUlIa0AHoUb4yxO0e-q8w6D90yemThxE2aTDyMZ1xPYq__Ox0H4gV6pqm8kZi84DO0SmxjMChnpNZqAzEY_qI_Kxa5jsyxAVeOHA4kTAUeoRpDSWcxhoOmOKzI7xUlIHhLy8k";
+
+.outer {
+    border-bottom: 4px solid @green;
+    box-shadow: 5px 5px 5px 5px @red;
+    margin: -10px 0px 30px;
+    background-image: linear-gradient(to bottom right, @red, black);
+
+  .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto 30px;
+    margin: -10px -10px 0px;
 
     text-align: center;
-    border-bottom: 1px solid black;
+
+    background-color: @black;
+    border-bottom: 4px solid @yellow;
+    background-image: linear-gradient(to bottom right, red, darkred);
+    //   background-image: url(@image);
+
+
 
     .hamburger {
-        align-self: flex-start;
-        text-align: left;
-        width: 100px;
+        background: none;
+      align-self: flex-start;
+      text-align: left;
+      width: 250px;
     }
 
     .main-title {
-        justify-self: center;
+      justify-self: center;
+      background: none;
+      // border: 3px solid @yellow;
+      border-bottom: none;
+      border-radius: 20px;
+      // box-shadow: 30px -20px 15px 15px @black, -30px -20px 8px 15px @black;
 
-        .title-font {
-            font-size: 2.5rem;
-            font-family: @title-font;
-        }
+      .title-font {
+        background: none;
+        font-size: 2.8rem;
+        padding: 0 70px;
+        font-family: @title-font;
+      }
     }
 
     .buttons {
-        width: 100px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        align-self: flex-start;
+      background: none;
+      width: 250px;
+      margin-top: 5px;
+      padding-right: 10px;
 
-        .button {
-            padding: 5px 20px;
-            border: 1px solid black;
-            border-radius: 10px;
-        }
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      align-self: flex-start;
+
+      .button {
+        width: 90px;
+        padding: 5px;
+        margin-right: 5px;
+        background-color: @green;
+        background-image: linear-gradient(to bottom left, @yellow, @green);
+        color: @grey;
+        border: 2px solid @yellow;
+        border-radius: 10px;
+      }
+
+      .logout {
+        align-self: flex-end;
+        justify-self: flex-end;
+        margin-right: 0;
+      }
     }
+  }
 }

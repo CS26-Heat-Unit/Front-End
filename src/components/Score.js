@@ -3,7 +3,8 @@ import React from "react";
 function Score() {
   return (
     <div className="score">
-      hello from inside the score
+      <h2>Location: </h2>
+      <h4>Scovilles: </h4>
     </div>
   );
 }
