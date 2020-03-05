@@ -7,6 +7,7 @@ const initialState = {
     id: localStorage.getItem('user') || null,
     isLoading: false,
     error: null,
+    score: 0
 
 }
 

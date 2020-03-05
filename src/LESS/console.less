@@ -52,7 +52,7 @@
 
       .messages {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: flex-start;
         align-items: flex-start;
 
@@ -180,7 +180,9 @@
       border: 1px solid @black;
       border-radius: 5px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       width: 20%;
       background-image: linear-gradient(to top, white, yellow, orange, red, darkred);
 
@@ -189,6 +191,11 @@
         margin-top: 10px;
         font-size: 1.6rem;
         padding-left: 10px;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+        color: @red;
       }
     }
   }

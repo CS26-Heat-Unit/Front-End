@@ -18,6 +18,7 @@ const Register = props => {
         setSomethingWentWrong(false);
         console.log(res);
         localStorage.setItem("token", res.data.key);
+        localStorage.setItem("user", data.username);
         props.setLoggedIn(true);
         props.history.push("/play");
       })

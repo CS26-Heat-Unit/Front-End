@@ -33,6 +33,7 @@
       // box-shadow: 30px -20px 15px 15px @black, -30px -20px 8px 15px @black;
 
       .title-font {
+        text-decoration: none;
         background: none;
         font-size: 2.8rem;
         padding: 0 70px;
@@ -51,6 +52,27 @@
       align-items: flex-start;
       align-self: flex-start;
 
+      .logged-out-buttons {
+        display: flex;
+        flex-direction: column;
+
+        .reminder {
+          margin-top: 10px;
+          padding: 2px 5px;
+          background-color: white;
+          border: 2px solid yellow;
+          border-radius: 5px;
+          p {
+            color: @black;
+            font-size: 0.6rem;
+            &:before {
+              display: inline;
+              content: "⚠ ";
+            }
+          }
+        }
+      }
+
       .button {
         width: 90px;
         padding: 5px;
@@ -59,10 +81,10 @@
         color: black;
         border: 2px solid @yellow;
         border-radius: 10px;
-        transition: .2s ease-in-out;
+        transition: 0.2s ease-in-out;
 
         &:hover {
-          transition: .2s ease-in-out;
+          transition: 0.2s ease-in-out;
           color: @red;
           background-color: @yellow;
         }
