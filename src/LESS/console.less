@@ -1,140 +1,169 @@
 .console {
-    background-color: @green;
-    background-image: linear-gradient(to bottom left, @yellow, green);
+  background-color: @green;
+  background-image: linear-gradient(to bottom left, @yellow, green);
 
-    border: 3px solid green;
+  border: 3px solid green;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+  height: 70vh;
+  max-height: 800px;
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+
+  .map {
+    border: 3px solid @black;
+    background-color: @black;
     border-radius: 5px;
 
+    width: 950px;
+    margin: 5px auto;
+    height: 640px;
+  }
+
+  .interface {
     display: flex;
-    flex-direction: column;
 
-    width: 80%;
-    height: 70vh;
-    max-height: 800px;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    height: 19%;
+    padding: 10px 0;
+
+    background-color: whitesmoke;
+  }
+  .chat {
+    border: 1px solid @black;
+    background-color: lightgray;
+    color: @black;
+    border-radius: 5px;
     display: flex;
-    max-width: 1000px;
-    margin: auto;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
 
+    font-size: .8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    .map {
-        border: 3px solid @black;
-        background-color: @black;
+    width: 40%;
+    padding: 0 0 5px 10px;
+    box-shadow: 2px 3px silver inset;
+  }
+
+  .controls {
+    // border: 1px solid black;
+    // border-radius: 5px;
+
+    background: none;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .actions {
+      display: flex;
+      background: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      .action {
+        width: 110px;
+        height: 110px;
+        margin: auto;
+
+        background-color: @red;
+        background-image: linear-gradient(to bottom right, red, darkred);
+        border: 2px solid darkgoldenrod;
+        border-radius: 10px;
+        font-family: @title-font;
+        font-size: 4rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: 0.05s ease-in-out;
+
+        &:hover {
+          transition: 0.2s ease-in-out;
+          font-size: 4.05rem;
+          color: maroon;
+        }
+
+        &:active {
+            box-shadow: inset 4px 0 4px 4px maroon;
+            font-size: 4rem;
+          }
+      }
+}
+
+    .arrows {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      .arrow {
+        margin: 2px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: @red;
+        background-image: linear-gradient(to bottom right, red, darkred);
+        border: 2px solid darkgoldenrod;
         border-radius: 5px;
 
-        width: 95%;
-        margin: 5px auto;
-        height: 80%;
-    }
+        transition: 0.05s ease-in-out;
 
-    .interface {
+        &:hover {
+            transition: 0.2s ease-in-out;
+            font-size: 1.55rem;
+            color: maroon;
+          }
+  
+          &:active {
+              box-shadow: inset 4px 0 4px 4px maroon;
+              font-size: 1.5rem;
+            }
+      }
+
+      .arrows-bottom {
         display: flex;
-        
         flex-direction: row;
-        justify-content: space-evenly;
-
-        height: 19%;
-        padding: 10px 0;
-        
-        background-color: whitesmoke;
+      }
     }
-        .chat {
-            border: 1px solid @black;
-            background-color: lightgray;
-            color: @black;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: flex-end;
-            align-items: flex-end;
+  }
 
-            width: 40%;
-            padding: 0 0 5px 10px;
-            box-shadow: 2px 3px silver inset;
-        }
+  .score {
+    border: 1px solid @black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
 
-        .controls {
-            // border: 1px solid black;
-            // border-radius: 5px;
-
-            background: none;
-            width: 30%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            .actions {
-                display: flex;
-                background: none;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-
-                .action {
-                    width: 110px;
-                    height: 50px;
-                    margin: auto;
-
-                    background-color: @red;
-                    background-image: linear-gradient(to bottom right, red, darkred);
-                    border: 2px solid @yellow;
-                    border-radius: 5px;
-                    font-family: @title-font;
-                    font-size: 1.3rem;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-
-            .arrows {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                background: none;
-                .arrow {
-                    margin: 2px;
-                    width: 50px;
-                    height: 50px;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    background-color: @red;
-                    background-image: linear-gradient(to bottom right, red, darkred);
-                    border: 2px solid @yellow;
-                    border-radius: 5px;
-                }
-
-                .arrows-bottom {
-                    display: flex;
-                    flex-direction: row;
-                }
-            }
-        }
-
-        .score {
-            border: 1px solid @black;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 20%;
-
-            h2 {
-                font-family: @title-font;
-                color: @red;
-                padding-left: 10px;
-            }
-
-            h4 {
-                font-family: @title-font;
-                color: @red;
-                margin-top: 0px;
-                font-size: 1.3rem;
-                padding-left: 10px;
-            }
-        }
+    h2 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: @black;
+      padding-left: 10px;
     }
+
+    h4 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: @black;
+      margin-top: 0px;
+      font-size: 1.2rem;
+      padding-left: 10px;
+    }
+  }
+}

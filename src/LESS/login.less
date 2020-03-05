@@ -1,7 +1,7 @@
 .login {
-  height: 220px;
-  width: 30%;
-  max-width: 500px;
+  height: auto;
+  width: 40%;
+  max-width: 800px;
   margin: 100px auto;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   box-shadow: black 1px 1px 0px 1px;
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     background: none;
   }
 
@@ -21,17 +21,16 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    width: 70%;
     background: none;
 
-    input {
+    TextField {
       color: @black;
       margin: 5px;
-      padding: 5px 10px;
     }
 
     .button {
-      width: 100px;
+      width: 130px;
       padding: 5px;
       margin: 10px;
       background-color: @red;
@@ -43,55 +42,32 @@
   span {
     background: none;
     margin: 20px;
+    padding-bottom: 20px;
     color: white;
   }
 }
 
-.register {
-  height: 220px;
-  width: 30%;
-  max-width: 500px;
-  margin: 100px auto;
+.error::before {
+  display: inline;
+  content: "⚠ ";
+}
+
+.somethingWentWrong {
+  height: auto;
+  width: 40%;
+  max-width: 800px;
+  margin: -80px auto;
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   align-items: center;
-  background-image: linear-gradient(to bottom left, @yellow, green);
-  border: 3px solid green;
+
+  background-color: @red;
+  background-image: linear-gradient(to bottom right, red, darkred);
+  color: white;
+  border: 3px solid white;
   border-radius: 5px;
   box-shadow: black 1px 1px 0px 1px;
-
-  h2 {
-    font-size: 1.2rem;
-    background: none;
-  }
-
-  .loginForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    background: none;
-
-    input {
-      color: @black;
-      margin: 5px;
-      padding: 5px 10px;
-    }
-
-    .button {
-      width: 100px;
-      padding: 5px;
-      margin: 10px;
-      background-color: @red;
-      background-image: linear-gradient(to bottom right, red, darkred);
-      border: 2px solid goldenrod;
-      border-radius: 5px;
-    }
-  }
-  span {
-    background: none;
-    margin: 20px;
-    color: white;
-  }
 }
