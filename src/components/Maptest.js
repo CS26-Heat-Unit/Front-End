@@ -53,7 +53,8 @@ function Maptest() {
         38 : false,
         39 : false,
         40 : false
-    };
+	};
+	
 
     var viewport = {
         screen		: [0,0],
@@ -142,7 +143,7 @@ window.onload = function()
     
 	ctx = document.getElementById('game').getContext("2d");
 	requestAnimationFrame(drawGame);
-	ctx.font = "bold 10pt sans-serif";
+	ctx.font = "bold 20pt sans-serif";
 
 	window.addEventListener("keydown", function(e) {
 		if(e.keyCode>=37 && e.keyCode<=40) { keysDown[e.keyCode] = true; }
@@ -182,6 +183,11 @@ function drawGame()
 		{ player.timeMoved = currentFrameTime; }
 	}
 
+	var grd = ctx.createLinearGradient(100,500,200,30)
+	grd.addColorStop(0, 'black');
+	grd.addColorStop(1, 'yellow');
+	
+
 	viewport.update(player.position[0] + (player.dimensions[0]/2),
 		player.position[1] + (player.dimensions[1]/2));
 
@@ -195,18 +201,19 @@ function drawGame()
 			switch(gameMap[((y*mapW)+x)])
 			{
 				case 0:
-					ctx.fillStyle = "#685b48";
+					ctx.fillStyle = grd;
 					break;
 				default:
-					ctx.fillStyle = "#5aa457";
+					ctx.fillStyle = "gray";
 			}
 
 			ctx.fillRect( viewport.offset[0] + (x*tileW), viewport.offset[1] + (y*tileH),
 				tileW, tileH);
 		}
 	}
-
-	ctx.fillStyle = "#0000ff";
+    
+    
+	ctx.fillStyle = 'red';
 	ctx.fillRect(viewport.offset[0] + player.position[0], viewport.offset[1] + player.position[1],
 		player.dimensions[0], player.dimensions[1]);
 
