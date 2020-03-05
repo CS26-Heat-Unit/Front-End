@@ -37,12 +37,17 @@
       background-image: linear-gradient(to bottom right, red, darkred);
       border: 2px solid goldenrod;
       border-radius: 5px;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        transition: .2s ease-in-out;
+        transform: scale(1.02);
+      }
     }
   }
   span {
     background: none;
-    margin: 20px;
-    padding-bottom: 20px;
+    font-size: .8rem;
     color: white;
   }
 }
@@ -70,4 +75,8 @@
   border: 3px solid white;
   border-radius: 5px;
   box-shadow: black 1px 1px 0px 1px;
+
+  p {
+    font-size: 0.8rem;
+  }
 }

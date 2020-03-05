@@ -88,7 +88,7 @@ const Register = props => {
                 if (value === getValues()["password1"]) {
                   return true;
                 } else {
-                  return "The passwords do not match";
+                  return "Passwords must match.";
                 }
               }
             }}
