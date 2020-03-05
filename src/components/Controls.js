@@ -4,8 +4,8 @@ function Controls() {
   return (
     <div className="controls">
       <div className="actions">
-        <div className="action">⚔</div>
-        {/* <div className="action">Flee</div> */}
+        <div className="action">⚔️</div>
+        <div className="action">🔍</div>
       </div>
       <div className="arrows">
         <div className="arrow">↑</div>
