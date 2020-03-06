@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import rooms from "../assets/rooms";
+import { connect } from 'react-redux'
+import { getRooms } from './actions/index'
 import axiosWithAuth from "../utils/axiosWithAuth";
 
 function Controls(props) {
@@ -13,6 +15,12 @@ function Controls(props) {
     "Spiiiiiiicy!",
     "Feel the burn!"
   ];
+
+  useEffect(()=>{
+    getRooms()
+  },[])
+
+  //Object.keys(props.rooms).length==0? null : we got rooms
 
   var keysDown = {
     37: false,
@@ -116,4 +124,10 @@ function Controls(props) {
   );
 }
 
-export default Controls;
+const mapStateToProps = state =>{
+  return {
+    rooms: state.rooms
+  }
+}
+
+export default connect(mapStateToProps, { getRooms })(Controls);
