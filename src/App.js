@@ -13,7 +13,6 @@ function App() {
 
   return (
     <div className="App">
-      <Route exact path="/" render={props => <Redirect to="/play" />} />
 
       <Route
         path="/"
@@ -45,7 +44,7 @@ function App() {
           />
         )}
       />
-      <Route path="/play" render={props => <Console loggedIn={loggedIn} />} />
+      <Route exact path="/" render={props => <Console loggedIn={loggedIn} />} />
     </div>
   );
 }

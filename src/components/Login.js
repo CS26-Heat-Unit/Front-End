@@ -6,24 +6,27 @@ import { useForm, Controller } from "react-hook-form";
 import TextField from "@material-ui/core/TextField";
 
 const Login = props => {
-
   const { handleSubmit, errors, control } = useForm();
 
   const [somethingWentWrong, setSomethingWentWrong] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async data => {
+    setLoading(true);
     console.log(data);
     axios
       .post("https://heat-unit.herokuapp.com/login/", data)
       .then(res => {
+        setLoading(false);
         setSomethingWentWrong(false);
         console.log(res);
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", data.username);
         props.setLoggedIn(true);
-        props.history.push("/play");
+        props.history.push("/");
       })
       .catch(err => {
+        setLoading(false);
         console.log(err);
         setSomethingWentWrong(true);
       });
@@ -75,12 +78,20 @@ const Login = props => {
             <noscript />
           )}
 
-          <input
-            className="button"
-            type="submit"
-            onClick={handleSubmit(onSubmit)}
-            value="Log In"
-          />
+          {!loading ? (
+            <input
+              className="button"
+              type="submit"
+              onClick={handleSubmit(onSubmit)}
+              value="Log In"
+            />
+          ) : (
+            <input
+              className="button"
+              type="submit"
+              value="Logging in..."
+            />
+          )}
         </form>
         <Link to="/register">
           <span>Don't have an account?</span>
