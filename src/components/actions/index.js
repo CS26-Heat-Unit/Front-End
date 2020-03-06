@@ -13,6 +13,9 @@ export  const GET_ROOMS_START = 'GET_ROOMS_START';
 export  const GET_ROOMS_SUCCESS = 'GET_ROOMS_SUCCESS';
 export  const GET_ROOMS_FAIL = 'GET_ROOMS_FAIL';
 
+export  const UPDATE_USER_START = 'UPDATE_USER_START';
+export  const UPDATE_USER_FAIL = 'UPDATE_USER_FAIL';
+export  const UPDATE_USER_SUCCESS = 'UPDATE_USER_SUCCESS';
 
 export const LOGOUT = 'LOGOUT';
 
@@ -50,14 +53,30 @@ export const register = (credentials) => dispatch => {
 }
 
 export const getRooms = () => dispatch =>{
-    dispatch(GET_ROOMS_START)
+    console.log("hello")
+    dispatch({type:GET_ROOMS_START})
     axios
-    .get("https://heat-unit.herokuapp.com/api/rooms")//this may not be the correct link
+    .get("https://heat-unit-backend.herokuapp.com/rooms/")//this may not be the correct link
     .then(response=>{
+        console.log('this is the response')
         dispatch({type:GET_ROOMS_SUCCESS, payload:response})
     })
     .catch(err =>{
+        console.log("this is the fail")
         dispatch({type:GET_ROOMS_FAIL, payload:err.response})
+    }) 
+
+}
+
+export const updateUserRoom = (roomId) => dispatch =>{
+    dispatch(UPDATE_USER_START)
+    axios
+    .get("https://heat-unit.herokuapp.com/api/move", roomId)//this may not be the correct link
+    .then(response=>{
+        dispatch({type:UPDATE_USER_SUCCESS, payload:response})
+    })
+    .catch(err =>{
+        dispatch({type:UPDATE_USER_START, payload:err.response})
     }) 
 
 }

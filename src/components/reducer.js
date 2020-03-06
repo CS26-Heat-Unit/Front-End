@@ -1,5 +1,5 @@
 import {
-    LOGIN_START, LOGIN_SUCCESS, LOGIN_FAIL, REGISTER_START, REGISTER_SUCCESS, REGISTER_FAIL, LOGOUT, GET_ROOMS_START, GET_ROOMS_SUCCESS, GET_ROOMS_FAIL
+    LOGIN_START, LOGIN_SUCCESS, LOGIN_FAIL, REGISTER_START, REGISTER_SUCCESS, REGISTER_FAIL, LOGOUT, GET_ROOMS_START, GET_ROOMS_SUCCESS, GET_ROOMS_FAIL,UPDATE_USER_START, UPDATE_USER_FAIL, UPDATE_USER_SUCCESS
 }  from './actions/index';
 
 
@@ -8,8 +8,10 @@ const initialState = {
     isLoading: false,
     error: null,
     rooms: {},
-    score: 0
-
+    score: 0,
+    currentRoom: 0, //current room id for the user
+    currentTitle:"",
+    currentDescription: ""
 }
 
 
@@ -62,13 +64,37 @@ const reducer = (state = initialState, action) => {
             }
         }
         case GET_ROOMS_SUCCESS:{
+            console.log('getting rooms')
             return {
                 ...state,
                 isLoading: false,
-                rooms:{...state.rooms, ...action.payload},
+                rooms:{...state.rooms, ...action.payload.data},
             }
         }
         case GET_ROOMS_FAIL: {
+            return{
+                ...state,
+                isLoading:false,
+                error: action.payload
+            }
+        }
+        case UPDATE_USER_START: {
+            return {
+                ...state,
+                isLoading:true,
+                error:""
+            }
+        }
+        case UPDATE_USER_SUCCESS:{
+            return {
+                ...state,
+                isLoading: false,
+                currentRoom:action.payload.currentRoom,
+                currentTitle: action.payload.title,
+                currentDescription: action.payload.description
+            }
+        }
+        case UPDATE_USER_FAIL: {
             return{
                 ...state,
                 isLoading:false,
