@@ -5,6 +5,8 @@ function Controls(props) {
   const room = props.room;
   let add = 100;
 
+  
+
   var keysDown = {
     37: false,
     38: false,
@@ -25,7 +27,7 @@ function Controls(props) {
   }
 
   const handleArrow = num => {
-    
+
   }
 
   return (
