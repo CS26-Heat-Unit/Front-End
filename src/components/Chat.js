@@ -3,7 +3,7 @@ import TextField from "@material-ui/core/TextField";
 
 function Chat(props) {
   const [newMessage, setNewMessage] = useState("");
-  const [user, setUser] = localStorage.getItem("user");
+  const user = localStorage.getItem("user");
 
   const element = document.getElementsByClassName('messages');
 
