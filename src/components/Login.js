@@ -14,11 +14,12 @@ const Login = props => {
   const onSubmit = async data => {
     console.log(data);
     axios
-      .post("https://heat-unit-backend.herokuapp.com/login/", data)
+      .post("https://heat-unit.herokuapp.com/login/", data)
       .then(res => {
         setSomethingWentWrong(false);
         console.log(res);
-        localStorage.setItem("token", res.data.key);
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("user", data.username);
         props.setLoggedIn(true);
         props.history.push("/play");
       })

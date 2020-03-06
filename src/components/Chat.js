@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 
-function Chat() {
+function Chat(props) {
   const [newMessage, setNewMessage] = useState("");
-  const [chats, setChats] = useState([
-    {message: "Chat in progress 1...", time: new Date().toTimeString()},
-    {message: "Chat in progress 2...", time: new Date().toTimeString()},
-    {message: "Chat in progress 3...", time: new Date().toTimeString()},
-  ]);
+  const [user, setUser] = localStorage.getItem("user");
+
+  const element = document.getElementsByClassName('messages');
+
+  const updateScroll = () => {
+    element.scrollTop = element.scrollHeight;
+  };
 
   const handleChange = e => {
     e.preventDefault();
@@ -15,34 +17,47 @@ function Chat() {
   };
 
   const handleSubmit = e => {
+    console.log(user);
     e.preventDefault();
-    setChats([...chats, {message: newMessage, time: new Date().toTimeString()}]);
-    setNewMessage('')
-    var frm = document.getElementsByClassName('enter')[0];
+    props.setChats([
+      {
+        message: `${user} says: "` + newMessage + `"`,
+        time: new Date().toTimeString()
+      }, ...props.chats
+    ]);
+    setNewMessage("");
+    var frm = document.getElementsByClassName("enter")[0];
     frm.reset();
+    updateScroll();
   };
 
   return (
     <div className="chat">
       <div className="messages">
-        {chats.map(chat => (
+        {props.chats.map(chat => (
           <>
             <div className="chats">
               <span className="time">[{chat.time.slice(0, 8)}] </span>
-               {chat.message}
+              {chat.message}
             </div>
           </>
         ))}
       </div>
-      <form className="enter" onSubmit={handleSubmit}>
-        >> <span className="spacer" />{" "}
-        <TextField
-          name="newMessage"
-          type="text"
-          placeholder="  got something to say?"
-          onChange={handleChange}
-        />
-      </form>
+      {props.loggedIn ? (
+        <form className="enter" onSubmit={handleSubmit}>
+          >> <span className="spacer" />{" "}
+          <TextField
+            name="newMessage"
+            type="text"
+            placeholder="  got something to say?"
+            onChange={handleChange}
+            fullWidth
+            style={{ width: 480 }}
+          />
+        </form>
+      ) : (
+        <noscript />
+      )}
     </div>
   );
 }

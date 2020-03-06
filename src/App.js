@@ -45,7 +45,7 @@ function App() {
           />
         )}
       />
-      <Route path="/play" render={props => <Console />} />
+      <Route path="/play" render={props => <Console loggedIn={loggedIn} />} />
     </div>
   );
 }
