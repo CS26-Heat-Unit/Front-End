@@ -381,7 +381,7 @@ function Maptest(props) {
             ctx.fillStyle = grd;
             break;
           default:
-            ctx.fillStyle = "grey";
+            ctx.fillStyle = "#fff";
         }
 
         ctx.fillRect(
@@ -411,7 +411,7 @@ function Maptest(props) {
   return (
     <div className="mapstyle">
       <canvas id="game" width="1120px" height="450"></canvas>
-      <img id="img" src={avatar} width={'2%'} height={'auto'} style={{position: 'absolute', left: '49%', top: 380}}/>
+      <img id="img" src={avatar} width={40} height={40} style={{position: 'absolute', left: '49%', top: 380}}/>
     </div>
   );
 }
