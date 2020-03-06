@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { connect } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import TextField from "@material-ui/core/TextField";
 
@@ -9,20 +8,24 @@ const Register = props => {
   const { handleSubmit, errors, control, getValues } = useForm();
 
   const [somethingWentWrong, setSomethingWentWrong] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async data => {
+    setLoading(true);
     console.log(data);
     axios
       .post("https://heat-unit.herokuapp.com/api/registration/", data)
       .then(res => {
+        setLoading(false);
         setSomethingWentWrong(false);
         console.log(res);
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("user", data.username);
         props.setLoggedIn(true);
-        props.history.push("/play");
+        props.history.push("/");
       })
       .catch(err => {
+        setLoading(false);
         console.log(err);
         setSomethingWentWrong(true);
       });
@@ -107,13 +110,16 @@ const Register = props => {
           ) : (
             <noscript />
           )}
-
-          <input
-            className="button"
-            type="submit"
-            value="Sign Up"
-            onClick={handleSubmit(onSubmit)}
-          />
+          {!loading ? (
+            <input
+              className="button"
+              type="submit"
+              value="Sign Up"
+              onClick={handleSubmit(onSubmit)}
+            />
+          ) : (
+            <input className="button" type="submit" value="Signing up..." />
+          )}
         </form>
         <Link to="/login">
           <span>Already have an account?</span>
@@ -131,8 +137,4 @@ const Register = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return { ...state };
-};
-
-export default connect(mapStateToProps, { Register })(Register);
+export default Register ;

@@ -4,6 +4,7 @@ import axios from "axios";
 import { connect } from 'react-redux'
 import { getRooms, updateUserRoom } from './actions/index'
 import axiosWithAuth from "../utils/axiosWithAuth";
+import { act } from "react-dom/test-utils";
 
 function Controls(props) {
   let rooms = props.rooms
@@ -41,12 +42,18 @@ function Controls(props) {
     let spice = Math.floor(Math.random() * (rnge[1] - rnge[0]) + rnge[0]);
     let holler = shouts[Math.floor(Math.random() * (3 - 1) + 1)];
     let chance = props.score / spice;
-    if (chance < 0.05) {
+
+    if (rnge[0] == 2500) {
+      chance = .5;
+    } else if (chance < 0.05) {
       chance = 0.1;
     } else if (chance > 0.9) {
       chance = 0.9;
     }
+
     let actual = Math.random();
+    console.log(chance)
+    console.log(actual)
 
     await props.setChats([
       {
@@ -56,7 +63,7 @@ function Controls(props) {
       ...props.chats
     ]);
 
-    if (actual >= chance) {
+    if (actual <= chance) {
       props.setScore(props.score + spice);
       localStorage.setItem("score", props.score);
       props.setChats([
