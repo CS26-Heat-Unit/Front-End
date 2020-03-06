@@ -16,7 +16,7 @@ function Header(props) {
       <div className="header">
         <div className="hamburger" />
         <div className="main-title">
-          <Link to='/play'>
+          <Link to='/'>
           <h1 className="title-font">Heat Unit</h1>
           </Link>
         </div>
