@@ -1,7 +1,7 @@
 import {
     LOGIN_START, LOGIN_SUCCESS, LOGIN_FAIL, REGISTER_START, REGISTER_SUCCESS, REGISTER_FAIL, LOGOUT, GET_ROOMS_START, GET_ROOMS_SUCCESS, GET_ROOMS_FAIL,UPDATE_USER_START, UPDATE_USER_FAIL, UPDATE_USER_SUCCESS
 }  from './actions/index';
-
+import {addSpice} from '../utils/spiceRange'
 
 const initialState = {
     id: localStorage.getItem('user') || null,
@@ -64,7 +64,8 @@ const reducer = (state = initialState, action) => {
             }
         }
         case GET_ROOMS_SUCCESS:{
-            console.log('getting rooms')
+            addSpice(action.payload.data)
+
             return {
                 ...state,
                 isLoading: false,

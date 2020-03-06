@@ -23,6 +23,9 @@ function Controls(props) {
     props.getRooms()
   },[])
   console.log(props.rooms)
+  
+  
+
   //Object.keys(props.rooms).length==0? null : we got rooms
 
   var keysDown = {
