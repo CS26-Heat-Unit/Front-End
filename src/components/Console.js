@@ -12,22 +12,13 @@ const Console = (props) => {
   const [chats, setChats] = useState([]);
   const [room, setRoom] = useState(0);
 
-
-  // const update = () => {
-  //   this.forceUpdate()
-  // }
-
-  // window.onload = update();
-
-  
-
     return (
       <div className="console">
         <Map room={room} setRoom={setRoom} />
         <div className="interface">
           <Chat chats={chats} setChats={setChats} loggedIn={props.loggedIn} />
           <Controls score={score} setScore={setScore}  chats={chats} setChats={setChats} room={room} />
-          <Score  score={score} />
+          <Score  score={score} room={room} />
         </div>
       </div>
     );

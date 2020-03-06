@@ -21,7 +21,7 @@ function Controls(props) {
     40: false
   };
 
-  function handleFight(e) {
+  async function handleFight(e) {
     e.preventDefault();
     let rnge = rooms[room].s;
     let spice = Math.floor(Math.random() * (rnge[1] - rnge[0]) + rnge[0]);
@@ -34,7 +34,7 @@ function Controls(props) {
     }
     let actual = Math.random();
 
-    props.setChats([
+    await props.setChats([
       {
         message: `This ${rooms[room].description} has ${spice} scoville heat units!!`,
         time: new Date().toTimeString()
@@ -53,7 +53,6 @@ function Controls(props) {
         ...props.chats
       ]);
     } else {
-
       props.setScore(props.score - spice);
       localStorage.setItem("score", props.score);
       props.setChats([

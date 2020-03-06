@@ -56,7 +56,7 @@ const Rooms = {
     "6": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 7,
@@ -65,7 +65,7 @@ const Rooms = {
     "7": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 8,
@@ -74,7 +74,7 @@ const Rooms = {
     "8": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 9,
@@ -83,7 +83,7 @@ const Rooms = {
     "9": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 10,
@@ -92,7 +92,7 @@ const Rooms = {
     "10": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 11,
@@ -101,7 +101,7 @@ const Rooms = {
     "11": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 12,
       "s_to": 0,
       "e_to": 0,
@@ -110,7 +110,7 @@ const Rooms = {
     "12": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 12,
       "e_to": 0,
@@ -119,7 +119,7 @@ const Rooms = {
     "13": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 13,
@@ -128,7 +128,7 @@ const Rooms = {
     "14": {
       "title": "Cayenne Peppers Room",
       "description": "This room is listed at 30,000 – 50,000 on the scoville scale, your discretion is advised",
-      "s": (30000, 50000),
+      "s": [30000, 50000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -137,7 +137,7 @@ const Rooms = {
     "15": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -146,7 +146,7 @@ const Rooms = {
     "16": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -155,7 +155,7 @@ const Rooms = {
     "17": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -164,7 +164,7 @@ const Rooms = {
     "18": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -173,7 +173,7 @@ const Rooms = {
     "19": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -182,7 +182,7 @@ const Rooms = {
     "20": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -191,7 +191,7 @@ const Rooms = {
     "21": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -200,7 +200,7 @@ const Rooms = {
     "22": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -209,7 +209,7 @@ const Rooms = {
     "23": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 24,
       "s_to": 0,
       "e_to": 0,
@@ -218,7 +218,7 @@ const Rooms = {
     "24": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 25,
@@ -227,7 +227,7 @@ const Rooms = {
     "25": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 26,
@@ -236,7 +236,7 @@ const Rooms = {
     "26": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 27,
@@ -245,7 +245,7 @@ const Rooms = {
     "27": {
       "title": "Cayenne Peppers Room",
       "description": "This room is listed at 30,000 – 50,000 on the scoville scale, your discretion is advised",
-      "s": (30000, 50000),
+      "s": [30000, 50000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 28,
@@ -254,7 +254,7 @@ const Rooms = {
     "28": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 29,
@@ -263,7 +263,7 @@ const Rooms = {
     "29": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 30,
@@ -272,7 +272,7 @@ const Rooms = {
     "30": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 31,
@@ -281,7 +281,7 @@ const Rooms = {
     "31": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 32,
@@ -290,7 +290,7 @@ const Rooms = {
     "32": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 33,
@@ -299,7 +299,7 @@ const Rooms = {
     "33": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 34,
@@ -308,7 +308,7 @@ const Rooms = {
     "34": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 35,
@@ -317,7 +317,7 @@ const Rooms = {
     "35": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 36,
       "s_to": 0,
       "e_to": 0,
@@ -326,7 +326,7 @@ const Rooms = {
     "36": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -335,7 +335,7 @@ const Rooms = {
     "37": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -344,7 +344,7 @@ const Rooms = {
     "38": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -353,7 +353,7 @@ const Rooms = {
     "39": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -362,7 +362,7 @@ const Rooms = {
     "40": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -371,7 +371,7 @@ const Rooms = {
     "41": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -380,7 +380,7 @@ const Rooms = {
     "42": {
       "title": "Cayenne Peppers Room",
       "description": "This room is listed at 30,000 – 50,000 on the scoville scale, your discretion is advised",
-      "s": (30000, 50000),
+      "s": [30000, 50000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -389,7 +389,7 @@ const Rooms = {
     "43": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -398,7 +398,7 @@ const Rooms = {
     "44": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -407,7 +407,7 @@ const Rooms = {
     "45": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -416,7 +416,7 @@ const Rooms = {
     "46": {
       "title": "Cayenne Peppers Room",
       "description": "This room is listed at 30,000 – 50,000 on the scoville scale, your discretion is advised",
-      "s": (30000, 50000),
+      "s": [30000, 50000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -425,7 +425,7 @@ const Rooms = {
     "47": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 48,
       "s_to": 0,
       "e_to": 0,
@@ -434,7 +434,7 @@ const Rooms = {
     "48": {
       "title": "Cayenne Peppers Room",
       "description": "This room is listed at 30,000 – 50,000 on the scoville scale, your discretion is advised",
-      "s": (30000, 50000),
+      "s": [30000, 50000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 49,
@@ -443,7 +443,7 @@ const Rooms = {
     "49": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 50,
@@ -452,7 +452,7 @@ const Rooms = {
     "50": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 51,
@@ -461,7 +461,7 @@ const Rooms = {
     "51": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 52,
@@ -470,7 +470,7 @@ const Rooms = {
     "52": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 53,
@@ -479,7 +479,7 @@ const Rooms = {
     "53": {
       "title": "Cayenne Peppers Room",
       "description": "This room is listed at 30,000 – 50,000 on the scoville scale, your discretion is advised",
-      "s": (30000, 50000),
+      "s": [30000, 50000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 54,
@@ -488,7 +488,7 @@ const Rooms = {
     "54": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 55,
@@ -497,7 +497,7 @@ const Rooms = {
     "55": {
       "title": "Cayenne Peppers Room",
       "description": "This room is listed at 30,000 – 50,000 on the scoville scale, your discretion is advised",
-      "s": (30000, 50000),
+      "s": [30000, 50000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 56,
@@ -506,7 +506,7 @@ const Rooms = {
     "56": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 57,
@@ -515,7 +515,7 @@ const Rooms = {
     "57": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 58,
@@ -524,7 +524,7 @@ const Rooms = {
     "58": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 59,
@@ -533,7 +533,7 @@ const Rooms = {
     "59": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 60,
       "s_to": 0,
       "e_to": 0,
@@ -542,7 +542,7 @@ const Rooms = {
     "60": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -551,7 +551,7 @@ const Rooms = {
     "61": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -560,7 +560,7 @@ const Rooms = {
     "62": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -569,7 +569,7 @@ const Rooms = {
     "63": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -578,7 +578,7 @@ const Rooms = {
     "64": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -587,7 +587,7 @@ const Rooms = {
     "65": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -596,7 +596,7 @@ const Rooms = {
     "66": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -605,7 +605,7 @@ const Rooms = {
     "67": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -614,7 +614,7 @@ const Rooms = {
     "68": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -623,7 +623,7 @@ const Rooms = {
     "69": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -632,7 +632,7 @@ const Rooms = {
     "70": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -641,7 +641,7 @@ const Rooms = {
     "71": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 72,
       "s_to": 0,
       "e_to": 0,
@@ -650,7 +650,7 @@ const Rooms = {
     "72": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 73,
@@ -659,7 +659,7 @@ const Rooms = {
     "73": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 74,
@@ -668,7 +668,7 @@ const Rooms = {
     "74": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 75,
@@ -677,7 +677,7 @@ const Rooms = {
     "75": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 76,
@@ -686,7 +686,7 @@ const Rooms = {
     "76": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 77,
@@ -695,7 +695,7 @@ const Rooms = {
     "77": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 78,
@@ -704,7 +704,7 @@ const Rooms = {
     "78": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 79,
@@ -713,7 +713,7 @@ const Rooms = {
     "79": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 80,
@@ -722,7 +722,7 @@ const Rooms = {
     "80": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 81,
@@ -731,7 +731,7 @@ const Rooms = {
     "81": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 82,
@@ -740,7 +740,7 @@ const Rooms = {
     "82": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 83,
@@ -749,7 +749,7 @@ const Rooms = {
     "83": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 84,
       "s_to": 0,
       "e_to": 0,
@@ -758,7 +758,7 @@ const Rooms = {
     "84": {
       "title": "Chiltepin Peppers Room",
       "description": "This room is listed at 50,000 – 100,000 on the scoville scale, your discretion is advised",
-      "s": (50000, 100000),
+      "s": [50000, 100000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -767,7 +767,7 @@ const Rooms = {
     "85": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -776,7 +776,7 @@ const Rooms = {
     "86": {
       "title": "Jalapeno Room",
       "description": "This room is listed at 2,500 – 8,000 on the scoville scale, your discretion is advised",
-      "s": (2500, 8000),
+      "s": [2500, 8000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -785,7 +785,7 @@ const Rooms = {
     "87": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -794,7 +794,7 @@ const Rooms = {
     "88": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -803,7 +803,7 @@ const Rooms = {
     "89": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -812,7 +812,7 @@ const Rooms = {
     "90": {
       "title": "Chile de Arbol Peppers Room",
       "description": "This room is listed at 15,000 – 65,000 on the scoville scale, your discretion is advised",
-      "s": (15000, 65000),
+      "s": [15000, 65000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -821,7 +821,7 @@ const Rooms = {
     "91": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -830,7 +830,7 @@ const Rooms = {
     "92": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -839,7 +839,7 @@ const Rooms = {
     "93": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -848,7 +848,7 @@ const Rooms = {
     "94": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,
@@ -857,7 +857,7 @@ const Rooms = {
     "95": {
       "title": "Serrano Peppers Room",
       "description": "This room is listed at 10,000 – 23,000 on the scoville scale, your discretion is advised",
-      "s": (10000, 23000),
+      "s": [10000, 23000],
       "n_to": 96,
       "s_to": 0,
       "e_to": 0,
@@ -866,7 +866,7 @@ const Rooms = {
     "96": {
       "title": "Cayenne Peppers Room",
       "description": "This room is listed at 30,000 – 50,000 on the scoville scale, your discretion is advised",
-      "s": (30000, 50000),
+      "s": [30000, 50000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 97,
@@ -875,7 +875,7 @@ const Rooms = {
     "97": {
       "title": "Carolina Reaper Chili Pepper Room",
       "description": "This room is listed at 2,200,000+ on the scoville scale, your discretion is advised",
-      "s": (2200000, 5000000),
+      "s": [2200000, 5000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 98,
@@ -884,7 +884,7 @@ const Rooms = {
     "98": {
       "title": "Habanero Peppers Room",
       "description": "This room is listed at 100,000 – 350,000 on the scoville scale, your discretion is advised",
-      "s": (100000, 350000),
+      "s": [100000, 350000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 99,
@@ -893,7 +893,7 @@ const Rooms = {
     "99": {
       "title": "Ghost Peppers Room",
       "description": "This room is listed at 1,000,000 on the scoville scale, your discretion is advised",
-      "s": (1000000, 1000000),
+      "s": [1000000, 1000000],
       "n_to": 0,
       "s_to": 0,
       "e_to": 0,

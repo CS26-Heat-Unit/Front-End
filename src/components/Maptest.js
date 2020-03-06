@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import avatar from '../assets/avi.jpg';
+import avatar from '../assets/avi.png';
 
 function Maptest(props) {
   var ctx = null;
@@ -376,7 +376,7 @@ function Maptest(props) {
             ctx.fillStyle = "#685b48";
             break;
           default:
-            ctx.fillStyle = "#5aa457";
+            ctx.fillStyle = "#fff";
         }
 
         ctx.fillRect(
@@ -388,7 +388,7 @@ function Maptest(props) {
       }
     }
 
-    ctx.fillStyle = "#5aa457";
+    ctx.fillStyle = "#fff";
 
     ctx.fillRect(
       viewport.offset[0] + player.position[0],
