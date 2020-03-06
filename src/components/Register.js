@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { connect } from "react-redux";
 import { useForm, Controller } from "react-hook-form";
 import TextField from "@material-ui/core/TextField";
 
@@ -138,8 +137,4 @@ const Register = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return { ...state };
-};
-
-export default connect(mapStateToProps, { Register })(Register);
+export default Register ;
