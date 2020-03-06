@@ -361,6 +361,10 @@ function Maptest(props) {
       }
     }
 
+    var grd = ctx.createLinearGradient(100,500,200,30)
+    grd.addColorStop(0, 'black');
+    grd.addColorStop(1, 'yellow');
+    
     viewport.update(
       player.position[0] + player.dimensions[0] / 2,
       player.position[1] + player.dimensions[1] / 2
@@ -369,14 +373,15 @@ function Maptest(props) {
     ctx.fillStyle = "#000000";
     ctx.fillRect(0, 0, viewport.screen[0], viewport.screen[1]);
 
+    
     for (var y = viewport.startTile[1]; y <= viewport.endTile[1]; ++y) {
       for (var x = viewport.startTile[0]; x <= viewport.endTile[0]; ++x) {
         switch (gameMap[y * mapW + x]) {
           case 0:
-            ctx.fillStyle = "#685b48";
+            ctx.fillStyle = grd;
             break;
           default:
-            ctx.fillStyle = "#fff";
+            ctx.fillStyle = "grey";
         }
 
         ctx.fillRect(
