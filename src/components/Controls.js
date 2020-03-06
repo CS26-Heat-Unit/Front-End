@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
-import rooms from "../assets/rooms";
+// import rooms from "../assets/rooms";
+import { connect } from 'react-redux'
+import { getRooms, updateUserRoom } from './actions/index'
 import axiosWithAuth from "../utils/axiosWithAuth";
 import { act } from "react-dom/test-utils";
 
 function Controls(props) {
+  let rooms = props.rooms
+  console.log(rooms)
   const room = props.room;
   let add = 100;
 
@@ -14,6 +18,16 @@ function Controls(props) {
     "Spiiiiiiicy!",
     "Feel the burn!"
   ];
+
+  useEffect(()=>{
+    console.log('this should hit')
+    props.getRooms()
+  },[])
+  console.log(props.rooms)
+  
+  
+
+  //Object.keys(props.rooms).length==0? null : we got rooms
 
   var keysDown = {
     37: false,
@@ -74,6 +88,16 @@ function Controls(props) {
 
   const handleInvestigate = e => {
     e.preventDefault();
+    // console.log('this is the room', props.room)
+    // props.updateUserRoom(props.room)
+    // props.setChats([
+    //   {
+    //     message: `${props.currentTitle} ${props.currentDescription}`,
+    //     time: new Date().toTimeString()
+    //   },
+    //   ...props.chats
+    // ]);
+    console.log('this is room number', room)
     props.setChats([
       {
         message: `${rooms[room].description}`,
@@ -123,4 +147,12 @@ function Controls(props) {
   );
 }
 
-export default Controls;
+const mapStateToProps = state =>{
+  return {
+    rooms: state.rooms,
+    title:state.currentTitle,
+    description:state.currentDescription
+  }
+}
+
+export default connect(mapStateToProps, { getRooms })(Controls);
