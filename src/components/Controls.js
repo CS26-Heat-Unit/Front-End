@@ -2,7 +2,15 @@ import React from "react";
 
 function Controls(props) {
 
+  const room = props.room;
   let add = 100;
+
+  var keysDown = {
+    37: false,
+    38: false,
+    39: false,
+    40: false
+  };
 
   async function handleFight(e) {
     e.preventDefault();
@@ -13,7 +21,11 @@ function Controls(props) {
 
   const handleInvestigate = e => {
     e.preventDefault();
-    props.setChats([{message: "You clicked investigate!", time: new Date().toTimeString()}, ...props.chats])
+    props.setChats([{message: `You clicked investigate in room #${room}!`, time: new Date().toTimeString()}, ...props.chats])
+  }
+
+  const handleArrow = num => {
+    
   }
 
   return (
@@ -23,11 +35,11 @@ function Controls(props) {
         <div className="action" onClick={handleInvestigate}>🔍</div>
       </div>
       <div className="arrows">
-        <div className="arrow">↑</div>
+        <div className="arrow" onClick={handleArrow(38)}>↑</div>
         <div className="arrows-bottom">
-          <div className="arrow">←</div>
-          <div className="arrow">↓</div>
-          <div className="arrow">→</div>
+          <div className="arrow" onClick={handleArrow(37)}>←</div>
+          <div className="arrow" onClick={handleArrow(40)}>↓</div>
+          <div className="arrow" onClick={handleArrow(39)}>→</div>
         </div>
       </div>
     </div>

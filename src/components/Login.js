@@ -14,7 +14,7 @@ const Login = props => {
   const onSubmit = async data => {
     console.log(data);
     axios
-      .post("https://heat-unit-backend.herokuapp.com/login/", data)
+      .post("https://heat-unit.herokuapp.com/login/", data)
       .then(res => {
         setSomethingWentWrong(false);
         console.log(res);

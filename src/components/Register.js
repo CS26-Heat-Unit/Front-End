@@ -13,7 +13,7 @@ const Register = props => {
   const onSubmit = async data => {
     console.log(data);
     axios
-      .post("https://heat-unit-backend.herokuapp.com/api/registration/", data)
+      .post("https://heat-unit.herokuapp.com/api/registration/", data)
       .then(res => {
         setSomethingWentWrong(false);
         console.log(res);
